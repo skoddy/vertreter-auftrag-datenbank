@@ -77,11 +77,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\GehaltsbueroModels\GehaltsbueroModels.csproj">
-      <Project>{EDC4BBDF-B909-4569-803D-BB714937CF76}</Project>
-      <Name>GehaltsbueroModels</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

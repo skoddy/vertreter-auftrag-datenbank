@@ -5,12 +5,13 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GehaltsbueroApp", "GehaltsbueroApp\GehaltsbueroApp.csproj", "{6AE0ED6F-8913-47B4-A6CE-0237D4F7512E}"
 	ProjectSection(ProjectDependencies) = postProject
-		{EDC4BBDF-B909-4569-803D-BB714937CF76} = {EDC4BBDF-B909-4569-803D-BB714937CF76}
+		{21118029-6213-4F73-B947-5B06930EC2AD} = {21118029-6213-4F73-B947-5B06930EC2AD}
+		{961C6F81-0ACA-4FFA-8AD9-9EB84C7BC9EE} = {961C6F81-0ACA-4FFA-8AD9-9EB84C7BC9EE}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GehaltsbueroModels", "GehaltsbueroModels\GehaltsbueroModels.csproj", "{EDC4BBDF-B909-4569-803D-BB714937CF76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GehaltsbueroModels", "GehaltsbueroModels\GehaltsbueroModels.csproj", "{21118029-6213-4F73-B947-5B06930EC2AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GehaltsbueroRepository", "GehaltsbueroRepository\GehaltsbueroRepository.csproj", "{03835719-D09E-47BC-BB5F-BAAC4D08AC60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GehaltsbueroRepository", "GehaltsbueroRepository\GehaltsbueroRepository.csproj", "{961C6F81-0ACA-4FFA-8AD9-9EB84C7BC9EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,14 +23,14 @@ Global
 		{6AE0ED6F-8913-47B4-A6CE-0237D4F7512E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AE0ED6F-8913-47B4-A6CE-0237D4F7512E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AE0ED6F-8913-47B4-A6CE-0237D4F7512E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EDC4BBDF-B909-4569-803D-BB714937CF76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EDC4BBDF-B909-4569-803D-BB714937CF76}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EDC4BBDF-B909-4569-803D-BB714937CF76}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EDC4BBDF-B909-4569-803D-BB714937CF76}.Release|Any CPU.Build.0 = Release|Any CPU
-		{03835719-D09E-47BC-BB5F-BAAC4D08AC60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{03835719-D09E-47BC-BB5F-BAAC4D08AC60}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{03835719-D09E-47BC-BB5F-BAAC4D08AC60}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{03835719-D09E-47BC-BB5F-BAAC4D08AC60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21118029-6213-4F73-B947-5B06930EC2AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21118029-6213-4F73-B947-5B06930EC2AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21118029-6213-4F73-B947-5B06930EC2AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21118029-6213-4F73-B947-5B06930EC2AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{961C6F81-0ACA-4FFA-8AD9-9EB84C7BC9EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{961C6F81-0ACA-4FFA-8AD9-9EB84C7BC9EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{961C6F81-0ACA-4FFA-8AD9-9EB84C7BC9EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{961C6F81-0ACA-4FFA-8AD9-9EB84C7BC9EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

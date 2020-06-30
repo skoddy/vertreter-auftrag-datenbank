@@ -10,12 +10,8 @@ namespace Gehaltsbuero.Repository.Sql
     {
         public DbSet<Vertreter> Vertreter { get; set; }
 
-        public GehaltsbueroContext(DbContextOptions<GehaltsbueroContext> options) { }
+        public GehaltsbueroContext(DbContextOptions<GehaltsbueroContext> options) : base(options){ }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseMySQL("server=localhost;database=salaryoffice;user=root;password=root");
-        }
 
     }
 }
