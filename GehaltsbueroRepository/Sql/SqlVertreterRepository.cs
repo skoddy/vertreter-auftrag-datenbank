@@ -31,7 +31,17 @@ namespace Gehaltsbuero.Repository.Sql
 
         public Vertreter Upsert(Vertreter vertreter)
         {
-            throw new NotImplementedException();
+            var current =  _db.Vertreter.FirstOrDefault(_vertreter => _vertreter.Id == vertreter.Id);
+            if (null == current)
+            {
+                _db.Vertreter.Add(vertreter);
+            }
+            else
+            {
+                _db.Entry(current).CurrentValues.SetValues(vertreter);
+            }
+            _db.SaveChanges();
+            return vertreter;
         }
     }
 }

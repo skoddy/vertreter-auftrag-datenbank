@@ -14,7 +14,7 @@ namespace Gehaltsbuero.Models
             VertreterName = $"{vertreter.Vorname} {vertreter.Nachname}"; ;
         }
 
-        public string AuftragsNummer { get; set; } = "AAAAA";
+        public string Auftragsnummer { get; set; } = "AAAAA";
         public Vertreter Vertreter { get; set; }
         public string VertreterName { get; set; }
         public List<Posten> Posten { get; set; } = new List<Posten>();
