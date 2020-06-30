@@ -1,6 +1,6 @@
 ﻿using Gehaltsbuero.Models;
 
-namespace Gehaltsbuero
+namespace Gehaltsbuero.Models
 {
     public class Produkt : DBObject
     {

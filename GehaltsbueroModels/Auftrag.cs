@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Gehaltsbuero
+namespace Gehaltsbuero.Models
 {
     public class Auftrag : DBObject
     {
