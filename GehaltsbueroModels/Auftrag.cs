@@ -18,6 +18,6 @@ namespace Gehaltsbuero.Models
         public Vertreter Vertreter { get; set; }
         public string VertreterName { get; set; }
         public List<Posten> Posten { get; set; } = new List<Posten>();
-        public decimal Summe => Posten.Sum(posten => posten.Leistung.Preis);
+        public decimal Summe => Posten.Sum(posten => posten.Produkt.Preis);
     }
 }
