@@ -6,6 +6,6 @@ namespace Gehaltsbuero.Models
     {
         public Guid AuftragsId { get; set; }
         public Auftrag Auftrag { get; set; }
-        public Produkt Leistung { get; set; }
+        public Produkt Produkt { get; set; }
     }
 }
