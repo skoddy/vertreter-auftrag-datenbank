@@ -29,18 +29,15 @@
         private void InitializeComponent()
         {
             this.grdVertreter = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnAddVertreter = new System.Windows.Forms.Button();
             this.tbVorname = new System.Windows.Forms.TextBox();
             this.tbNachname = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnDeleteVertreter = new System.Windows.Forms.Button();
             this.btnShowVertraege = new System.Windows.Forms.Button();
-            this.Nachname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vorname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDeleteVertreter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdVertreter)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -53,25 +50,12 @@
             this.grdVertreter.AllowUserToResizeColumns = false;
             this.grdVertreter.AllowUserToResizeRows = false;
             this.grdVertreter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdVertreter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nachname,
-            this.Vorname});
             this.grdVertreter.Location = new System.Drawing.Point(6, 19);
             this.grdVertreter.Name = "grdVertreter";
             this.grdVertreter.ReadOnly = true;
             this.grdVertreter.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdVertreter.Size = new System.Drawing.Size(410, 232);
             this.grdVertreter.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(492, 171);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnAddVertreter
             // 
@@ -111,15 +95,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Vertreter Hinzufügen";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Vorname";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -128,6 +103,15 @@
             this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Nachname";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Vorname";
             // 
             // groupBox2
             // 
@@ -141,15 +125,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Vertreter";
             // 
-            // btnDeleteVertreter
-            // 
-            this.btnDeleteVertreter.Location = new System.Drawing.Point(6, 257);
-            this.btnDeleteVertreter.Name = "btnDeleteVertreter";
-            this.btnDeleteVertreter.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteVertreter.TabIndex = 2;
-            this.btnDeleteVertreter.Text = "Löschen";
-            this.btnDeleteVertreter.UseVisualStyleBackColor = true;
-            // 
             // btnShowVertraege
             // 
             this.btnShowVertraege.Location = new System.Drawing.Point(310, 257);
@@ -159,19 +134,14 @@
             this.btnShowVertraege.Text = "Zeige Verträge";
             this.btnShowVertraege.UseVisualStyleBackColor = true;
             // 
-            // Nachname
+            // btnDeleteVertreter
             // 
-            this.Nachname.HeaderText = "Nachname";
-            this.Nachname.Name = "Nachname";
-            this.Nachname.ReadOnly = true;
-            this.Nachname.Width = 200;
-            // 
-            // Vorname
-            // 
-            this.Vorname.HeaderText = "Vorname";
-            this.Vorname.Name = "Vorname";
-            this.Vorname.ReadOnly = true;
-            this.Vorname.Width = 150;
+            this.btnDeleteVertreter.Location = new System.Drawing.Point(6, 257);
+            this.btnDeleteVertreter.Name = "btnDeleteVertreter";
+            this.btnDeleteVertreter.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteVertreter.TabIndex = 2;
+            this.btnDeleteVertreter.Text = "Löschen";
+            this.btnDeleteVertreter.UseVisualStyleBackColor = true;
             // 
             // VertreterControl
             // 
@@ -179,7 +149,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
             this.Name = "VertreterControl";
             this.Size = new System.Drawing.Size(656, 404);
             ((System.ComponentModel.ISupportInitialize)(this.grdVertreter)).EndInit();
@@ -193,7 +162,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView grdVertreter;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAddVertreter;
         private System.Windows.Forms.TextBox tbVorname;
         private System.Windows.Forms.TextBox tbNachname;
@@ -203,7 +171,5 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnShowVertraege;
         private System.Windows.Forms.Button btnDeleteVertreter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nachname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Vorname;
     }
 }

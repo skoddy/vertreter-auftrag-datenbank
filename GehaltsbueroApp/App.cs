@@ -2,6 +2,7 @@
 using Gehaltsbuero.Models;
 using Gehaltsbuero.Repository;
 using Gehaltsbuero.Repository.Sql;
+using Gehaltsbuero.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -15,19 +16,21 @@ namespace Gehaltsbuero
         public List<Vertreter> Vertreter;
 
         public static IGehaltsbueroRepository Repository { get; private set; }
-
+        public static MainViewModel ViewModel { get; set; }
         public App()
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, System.EventArgs e)
-        {
+        protected override void OnLoad(EventArgs e)
+        {           
             var dbOptions = 
                 new DbContextOptionsBuilder<GehaltsbueroContext>()
                 .UseMySQL("server=localhost;database=gehaltsbuero;user=root;password=root");
 
             Repository = new SqlGehaltsbueroRepository(dbOptions);
+            ViewModel = new MainViewModel();
+            VertreterControl vertreterControl = new VertreterControl();
+            ToggleControl(vertreterControl);
 
         }
 

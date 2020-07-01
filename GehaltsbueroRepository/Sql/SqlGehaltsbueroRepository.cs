@@ -20,5 +20,8 @@ namespace Gehaltsbuero.Repository.Sql
 
         public IVertreterRepository Vertreter => new SqlVertreterRepository(
             new GehaltsbueroContext(_dbOptions));
+
+        public IAuftragRepository Auftrag => new SqlAuftragRepository(
+            new GehaltsbueroContext(_dbOptions));
     }
 }

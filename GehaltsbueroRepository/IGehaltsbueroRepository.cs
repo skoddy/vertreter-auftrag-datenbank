@@ -8,5 +8,6 @@ namespace Gehaltsbuero.Repository
     public interface IGehaltsbueroRepository
     {
         IVertreterRepository Vertreter { get; }
+        IAuftragRepository Auftrag { get; }
     }
 }

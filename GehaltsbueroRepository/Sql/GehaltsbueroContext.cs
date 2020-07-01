@@ -9,6 +9,7 @@ namespace Gehaltsbuero.Repository.Sql
     public class GehaltsbueroContext : DbContext
     {
         public DbSet<Vertreter> Vertreter { get; set; }
+        public DbSet<Auftrag> Auftrag { get; set; }
 
         public GehaltsbueroContext(DbContextOptions<GehaltsbueroContext> options) : base(options){ }
 
