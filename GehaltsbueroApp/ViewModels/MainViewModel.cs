@@ -17,7 +17,7 @@ namespace Gehaltsbuero.ViewModels
         public ObservableCollection<VertreterViewModel> Vertreter { get; }
             = new ObservableCollection<VertreterViewModel>();
 
-        private void GetVertreterList()
+        public void GetVertreterList()
         {
             var vertreter = App.Repository.Vertreter.Get();
             if (vertreter == null)
@@ -40,6 +40,7 @@ namespace Gehaltsbuero.ViewModels
             {
                 App.Repository.Vertreter.Upsert(modifiedVertreter);
             }
+
             GetVertreterList();
         }
     }

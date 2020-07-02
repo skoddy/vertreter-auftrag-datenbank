@@ -16,7 +16,9 @@ namespace Gehaltsbuero
         public List<Vertreter> Vertreter;
 
         public static IGehaltsbueroRepository Repository { get; private set; }
+
         public static MainViewModel ViewModel { get; set; }
+
         public App()
         {
             InitializeComponent();

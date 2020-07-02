@@ -7,8 +7,7 @@ namespace Gehaltsbuero.Repository.Sql
     {
         private readonly DbContextOptions<GehaltsbueroContext> _dbOptions;
 
-        public SqlGehaltsbueroRepository(DbContextOptionsBuilder<GehaltsbueroContext>
-            dbOptionsBuilder)
+        public SqlGehaltsbueroRepository(DbContextOptionsBuilder<GehaltsbueroContext> dbOptionsBuilder)
         {
             _dbOptions = dbOptionsBuilder.Options;
             using (var db = new GehaltsbueroContext(_dbOptions))

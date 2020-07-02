@@ -29,101 +29,47 @@
         private void InitializeComponent()
         {
             this.grdVertreter = new System.Windows.Forms.DataGridView();
-            this.btnAddVertreter = new System.Windows.Forms.Button();
-            this.tbVorname = new System.Windows.Forms.TextBox();
-            this.tbNachname = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnNeuerVertreter = new System.Windows.Forms.Button();
             this.btnShowVertraege = new System.Windows.Forms.Button();
             this.btnDeleteVertreter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdVertreter)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // grdVertreter
             // 
-            this.grdVertreter.AllowUserToAddRows = false;
-            this.grdVertreter.AllowUserToDeleteRows = false;
             this.grdVertreter.AllowUserToResizeColumns = false;
             this.grdVertreter.AllowUserToResizeRows = false;
             this.grdVertreter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdVertreter.Location = new System.Drawing.Point(6, 19);
             this.grdVertreter.Name = "grdVertreter";
-            this.grdVertreter.ReadOnly = true;
             this.grdVertreter.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdVertreter.Size = new System.Drawing.Size(410, 232);
             this.grdVertreter.TabIndex = 0;
             // 
-            // btnAddVertreter
-            // 
-            this.btnAddVertreter.Location = new System.Drawing.Point(328, 38);
-            this.btnAddVertreter.Name = "btnAddVertreter";
-            this.btnAddVertreter.Size = new System.Drawing.Size(75, 23);
-            this.btnAddVertreter.TabIndex = 2;
-            this.btnAddVertreter.Text = "Speichern";
-            this.btnAddVertreter.UseVisualStyleBackColor = true;
-            this.btnAddVertreter.Click += new System.EventHandler(this.btnAddVertreter_Click);
-            // 
-            // tbVorname
-            // 
-            this.tbVorname.Location = new System.Drawing.Point(14, 40);
-            this.tbVorname.Name = "tbVorname";
-            this.tbVorname.Size = new System.Drawing.Size(150, 20);
-            this.tbVorname.TabIndex = 3;
-            // 
-            // tbNachname
-            // 
-            this.tbNachname.Location = new System.Drawing.Point(172, 40);
-            this.tbNachname.Name = "tbNachname";
-            this.tbNachname.Size = new System.Drawing.Size(150, 20);
-            this.tbNachname.TabIndex = 4;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.tbVorname);
-            this.groupBox1.Controls.Add(this.tbNachname);
-            this.groupBox1.Controls.Add(this.btnAddVertreter);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(422, 76);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Vertreter Hinzufügen";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(169, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Nachname";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Vorname";
-            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnNeuerVertreter);
             this.groupBox2.Controls.Add(this.btnShowVertraege);
             this.groupBox2.Controls.Add(this.btnDeleteVertreter);
             this.groupBox2.Controls.Add(this.grdVertreter);
-            this.groupBox2.Location = new System.Drawing.Point(3, 85);
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(422, 286);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Vertreter";
+            // 
+            // btnNeuerVertreter
+            // 
+            this.btnNeuerVertreter.Location = new System.Drawing.Point(87, 257);
+            this.btnNeuerVertreter.Name = "btnNeuerVertreter";
+            this.btnNeuerVertreter.Size = new System.Drawing.Size(75, 23);
+            this.btnNeuerVertreter.TabIndex = 4;
+            this.btnNeuerVertreter.Text = "Neu";
+            this.btnNeuerVertreter.UseVisualStyleBackColor = true;
+            this.btnNeuerVertreter.Click += new System.EventHandler(this.btnNeuerVertreter_Click);
             // 
             // btnShowVertraege
             // 
@@ -148,12 +94,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Name = "VertreterControl";
-            this.Size = new System.Drawing.Size(656, 404);
+            this.Size = new System.Drawing.Size(440, 355);
             ((System.ComponentModel.ISupportInitialize)(this.grdVertreter)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -162,14 +105,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView grdVertreter;
-        private System.Windows.Forms.Button btnAddVertreter;
-        private System.Windows.Forms.TextBox tbVorname;
-        private System.Windows.Forms.TextBox tbNachname;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnShowVertraege;
         private System.Windows.Forms.Button btnDeleteVertreter;
+        private System.Windows.Forms.Button btnNeuerVertreter;
     }
 }

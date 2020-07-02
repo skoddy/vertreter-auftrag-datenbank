@@ -2,13 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Gehaltsbuero.ViewModels
 {
-    public class VertreterViewModel : BindableBase
+    public class VertreterViewModel : BindableBase, IEditableObject
     {
         public ObservableCollection<Auftrag> Auftraege { get; } = new ObservableCollection<Auftrag>();
 
@@ -30,7 +31,7 @@ namespace Gehaltsbuero.ViewModels
                     _model = value;
                     RefreshAuftraege();
 
-                    //OnPropertyChanged(string.Empty);
+                    OnPropertyChanged(string.Empty);
                 }
             }
         }
@@ -73,7 +74,23 @@ namespace Gehaltsbuero.ViewModels
     && string.IsNullOrEmpty(Nachname) ? "Neuer Vertreter" : $"{Vorname} {Nachname}";
 
         public bool IsModified { get; set; }
-        public bool IsNew { get; private set; }
+        private bool _isNew;
+
+
+        public bool IsNew
+        {
+            get => _isNew;
+            set => Set(ref _isNew, value);
+        }
+
+        private bool _isInEdit = false;
+
+
+        public bool IsInEdit
+        {
+            get => _isInEdit;
+            set => Set(ref _isInEdit, value);
+        }
 
         public void RefreshVertreter()
         {
@@ -91,6 +108,56 @@ namespace Gehaltsbuero.ViewModels
                 Auftraege.Add(auftrag);
             }
 
+        }
+        public void Save()
+        {
+            IsModified = false;
+            if (IsNew)
+            {
+                IsNew = false;
+                App.ViewModel.Vertreter.Add(this);
+            }
+            
+            App.Repository.Vertreter.Upsert(Model);
+        }
+
+        public event EventHandler AddNewVertreterCanceled;
+
+        public void CancelEdits()
+        {
+            if (IsNew)
+            {
+                AddNewVertreterCanceled?.Invoke(this, EventArgs.Empty);
+            }
+            else
+            {
+                RevertChanges();
+            }
+        }
+
+        public void RevertChanges()
+        {
+            IsInEdit = false;
+            if (IsModified)
+            {
+                RefreshVertreter();
+                IsModified = false;
+            }
+        }
+
+        public void BeginEdit()
+        {
+            
+        }
+
+        public void EndEdit()
+        {
+            Save();
+        }
+
+        public void CancelEdit()
+        {
+            CancelEdits();
         }
     }
 }

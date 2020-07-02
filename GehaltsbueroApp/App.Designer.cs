@@ -69,6 +69,7 @@
             this.Controls.Add(this.btnShowVertreter);
             this.Controls.Add(this.panel1);
             this.Name = "App";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
 

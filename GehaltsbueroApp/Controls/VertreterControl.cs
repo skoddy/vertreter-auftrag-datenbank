@@ -3,37 +3,51 @@ using System.Windows.Forms;
 using Gehaltsbuero.Models;
 using System.Collections.ObjectModel;
 using Gehaltsbuero.ViewModels;
+using System.Linq;
+using Gehaltsbuero.Dialogs;
 
 namespace Gehaltsbuero.Controls
 {
     public partial class VertreterControl : UserControl
     {
-
         public MainViewModel ViewModel => App.ViewModel;
 
         public VertreterControl()
         {
             InitializeComponent();
+
             DataGridViewTextBoxColumn nachnameCol = new DataGridViewTextBoxColumn();
             DataGridViewTextBoxColumn vornameCol = new DataGridViewTextBoxColumn();
             nachnameCol.Name = "Nachname";
             nachnameCol.DataPropertyName = "Nachname";
-            nachnameCol.ReadOnly = true;
             vornameCol.Name = "Vorname";
             vornameCol.DataPropertyName = "Vorname";
-            vornameCol.ReadOnly = true;
             grdVertreter.Columns.AddRange(nachnameCol, vornameCol);
+
+            RefreshGrid();
+        }
+
+        private void RefreshGrid()
+        {
             grdVertreter.AutoGenerateColumns = false;
+            grdVertreter.DataSource = null;
             grdVertreter.DataSource = ViewModel.Vertreter;
         }
 
-
-        private void btnAddVertreter_Click(object sender, EventArgs e)
+        private void btnNeuerVertreter_Click(object sender, EventArgs e)
         {
-            Vertreter vertreter = new Vertreter();
-            vertreter.Vorname = tbVorname.Text;
-            vertreter.Nachname = tbNachname.Text;
-            App.Repository.Vertreter.Upsert(vertreter);
+            NeuerVertreter neuerVertreter = new NeuerVertreter();
+            neuerVertreter.ShowDialog();
+            if (neuerVertreter.DialogResult == DialogResult.OK)
+            {
+                RefreshGrid();
+                neuerVertreter.Dispose();
+            }
+            else
+            {
+                neuerVertreter.Dispose();
+            }
+
         }
     }
 }
